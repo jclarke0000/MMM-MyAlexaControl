@@ -74,7 +74,7 @@ module.exports = NodeHelper.create({
         this.sendSocketNotification("SEND-NOTIFICATION", {notification: "SET_SCREEN_STATE", payload: "ON"});
         break;
       case 'SWITCH_PROFILE':
-        this.sendSocketNotification("SEND-NOTIFICATION", {notification: "SET_SCREEN_STATE", payload: message.person});
+        this.sendSocketNotification("SEND-NOTIFICATION", {notification: "CURRENT_PROFILE", payload: message.person});
         break;
     }
 
