@@ -1,0 +1,14 @@
+{
+  "name": "mmm-myalexacontrol",
+  "version": "1.0.0",
+  "description": "Magic Mirror Module that listens to PubNub subscriptions to control MM from Alex voice commands",
+  "main": "MMM-MyAlexaControl.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeff Clarke",
+  "license": "MIT",
+  "dependencies": {
+    "pubnub": "^4.12.0"
+  }
+}
