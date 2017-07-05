@@ -65,13 +65,16 @@ module.exports = NodeHelper.create({
 
     switch(message.command) {
       case 'SLEEP':
-        this.sendSocketNotification("SEND-NOTIFICATION", {notification: "SET_SCREEN_STATE", payload: "OFF"})
+        this.sendSocketNotification("SEND-NOTIFICATION", {notification: "SET_SCREEN_STATE", payload: "OFF"});
         break;
       case 'SCREENSAVER':
-        this.sendSocketNotification("SEND-NOTIFICATION", {notification: "SET_SCREEN_STATE", payload: "SCREENSAVER"})
+        this.sendSocketNotification("SEND-NOTIFICATION", {notification: "SET_SCREEN_STATE", payload: "SCREENSAVER"});
         break;
       case 'WAKE':
-        this.sendSocketNotification("SEND-NOTIFICATION", {notification: "SET_SCREEN_STATE", payload: "ON"})
+        this.sendSocketNotification("SEND-NOTIFICATION", {notification: "SET_SCREEN_STATE", payload: "ON"});
+        break;
+      case 'SWITCH_PROFILE':
+        this.sendSocketNotification("SEND-NOTIFICATION", {notification: "SET_SCREEN_STATE", payload: message.person});
         break;
     }
 
