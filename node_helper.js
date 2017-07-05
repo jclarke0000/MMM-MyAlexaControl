@@ -1,4 +1,5 @@
 var PubNub = require('pubnub');
+const exec = require("child_process").exec;
 
 module.exports = NodeHelper.create({
 
@@ -76,6 +77,10 @@ module.exports = NodeHelper.create({
       case 'SWITCH_PROFILE':
         this.sendSocketNotification("SEND-NOTIFICATION", {notification: "CURRENT_PROFILE", payload: message.person});
         break;
+      case 'SHUT_DOWN':
+        exec("sudo shutdown now");
+        break;
+
     }
 
   }
