@@ -1,3 +1,4 @@
+var NodeHelper = require('node_helper');
 var PubNub = require('pubnub');
 const exec = require("child_process").exec;
 
